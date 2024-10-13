@@ -1,0 +1,27 @@
+//Leftmost and rightmost nodes of binary tree
+void element(Node* root){
+if(!root) return;
+queue<Node*>q;
+q.push(root);
+while(!q.empty()){
+    int n=q.size();
+    for(int i=1;i<=n;i++){
+        Node* curr=q.front();
+        if(i==1 || i==n){
+            cout<<curr->data<<" ";
+        }
+        if(curr->left){
+            q.push(curr->left);
+        }
+        if(curr->right){
+            q.push(curr->right);
+        }
+        q.pop();
+    }
+}
+}
+void printCorner(Node *root)
+{
+return element(root);
+
+}
